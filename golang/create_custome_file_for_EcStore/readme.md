@@ -3,5 +3,14 @@
 
 公司的框架因为要创建二次开发目录，需要把一级目录的文件移动到custom目录，而且都是copy过去，这个工具可以帮助减轻这部分工作
 
+
+
 使用方法：
 
+本地需要go的开发环境，进行编译
+
+
+
+![2.jpg](https://raw.githubusercontent.com/mh1988/coder_tools/master/golang/create_custome_file_for_EcStore/img/1.jpg)
+
+![2.jpg](https://raw.githubusercontent.com/mh1988/coder_tools/master/golang/create_custome_file_for_EcStore/img/2.jpg)
