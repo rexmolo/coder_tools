@@ -1,7 +1,5 @@
 <?php
 
-<?php
-
 abstract class skateschool_data_abstract_instance {
 
 	protected $mdlS;
