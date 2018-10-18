@@ -63,7 +63,7 @@ return $processor = [
 
 handler 目录下面写你自己的业务逻辑，建议直接新建一个文件夹，这样如果你的业务逻辑包含多个类的时候，不至于搞的那么乱
 
-####在handler目录创建事件处理器的几个点：
+#### 在handler目录创建事件处理器的几个点：
 
 1. 必须实现接口` weixin_event_interface_event`
 
