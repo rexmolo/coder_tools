@@ -72,8 +72,7 @@ handler 目录下面写你自己的业务逻辑，建议直接新建一个文件
 ```PHP
 public function __construct( $weChatPostData ) {
    $this->weChatPostData   = $weChatPostData;
-   
-   $this->context['couponId'] = $this->helper->getSceneId( $this->weChatPostData['EventKey'] , 		$this->weChatPostData['Event']);
+   $this->context['couponId'] = $this->helper->getSceneId( $this->weChatPostData['EventKey'] ,$this->weChatPostData['Event']);
 }
 ```
 
