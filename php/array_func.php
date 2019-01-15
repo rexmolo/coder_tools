@@ -30,7 +30,7 @@
      * @param $KeyStr
      * @return array|bool
      */
-    public static function arrayReduction($list, $KeyStr)
+    public static function arrayGet($list, $KeyStr)
     {
 
         if (empty($list) || empty($KeyStr)) return false;
