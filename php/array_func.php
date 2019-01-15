@@ -1,6 +1,6 @@
 <?php
 
-/**
+       /**
 	 * 根据数组中value进行排序
 	 *
 	 * @param $arr          array           待排序数据
@@ -20,4 +20,25 @@
 	    array_multisort($sortFoundation, $sortFlag, $arr);
 
 	    return $arr;
+    }
+
+
+     /**
+     * 从 list 中 取出$KeyStr的item 返回 array(1212, 1212, 1212) 类似数据;
+     *
+     * @param $list
+     * @param $KeyStr
+     * @return array|bool
+     */
+    public static function arrayReduction($list, $KeyStr)
+    {
+
+        if (empty($list) || empty($KeyStr)) return false;
+
+        $ls = array();
+        foreach ($list as $item) {
+            $ls[] = $item[$KeyStr];
+        }
+
+        return $ls;
     }
