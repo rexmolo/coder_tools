@@ -42,3 +42,25 @@
 
         return $ls;
     }
+
+
+    /**
+     * 强制将某数组中的某些key的value转换成数组格式
+     *
+     * @author: MaHui 397091486@qq.com 2019-03-04 - 15:40
+     *
+     * @param $array
+     * @param array $keys
+     *
+     * @return mixed
+     */
+    public function forceConvertArray($array, $keys = [])
+    {
+        if (empty($keys)) return $array;
+
+        array_walk($array, function (&$item, $key) use ($keys) {
+            $item = in_array($key, $keys) ? (array)$item : $item;
+        });
+
+        return $array;
+    }
