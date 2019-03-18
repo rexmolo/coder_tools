@@ -1,7 +1,7 @@
 <?php
 
 
-if (!function_exists('isMobile')) {
+
     //判断是手机登录还是电脑登录
     function isMobile()
     {
@@ -36,4 +36,13 @@ if (!function_exists('isMobile')) {
         }
         return false;
     }
-}
+
+
+
+    //判断浏览器是否微信
+    public function from_weixin() {
+        if ( strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false ) {
+            return true;
+        }
+        return false;
+    }
