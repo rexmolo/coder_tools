@@ -28,7 +28,7 @@
     private function getBeforeDay($format=false)
     {
         $beforeDayTimestamp = strtotime('-1 day');
-        if (!$format)
+        if ($format)
             return date($format, $beforeDayTimestamp);
 
         return $beforeDayTimestamp;
