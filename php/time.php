@@ -14,6 +14,25 @@
 
         return $times;
     }
+    
+    /**
+     *
+     * 获取当前时间前一天
+     * 
+     * @author: MaHui 397091486@qq.com 2019-04-26 - 13:43
+     *
+     * @param bool $format
+     *
+     * @return false|int|string
+     */
+    private function getBeforeDay($format=false)
+    {
+        $beforeDayTimestamp = strtotime('-1 day');
+        if (!$format)
+            return date($format, $beforeDayTimestamp);
+
+        return $beforeDayTimestamp;
+    }
 
 	/**
 	 * 获取一天中 开始时间和结束时间
