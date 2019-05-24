@@ -34,6 +34,14 @@ abstract class skateschool_data_abstract_instance {
 		return $this;
 	}
 
+	public function getMdl($mdl, $appId='activities')
+    {
+        if (isset($this->mdlS[$mdl]) || is_object($this->mdlS[$mdl]))
+            return $this->mdlS[$mdl];
+
+        return $this->instanceMdl($mdl, $appId);
+    }
+
 
 	private function setMdl($mdl, $appId)
 	{
