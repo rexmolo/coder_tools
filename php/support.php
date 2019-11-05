@@ -1,6 +1,12 @@
 <?php
 
 
+    function convert($size)
+    {
+        $unit=array('b','kb','mb','gb','tb','pb');
+        return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
+    }
+
 
     //判断是手机登录还是电脑登录
     function isMobile()
