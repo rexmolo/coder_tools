@@ -46,3 +46,44 @@
         }
         return false;
     }
+
+
+    /**
+     *下载文件支持断点续传header
+     *
+     * @params string $filename 下载文件名称
+     */
+    public function set_queue_header($filename,$size=null){
+        header("Cache-Control: public");
+        header("Content-Type: application/force-download");
+        header("Accept-Ranges: bytes");
+        if (strstr($_SERVER['HTTP_USER_AGENT'], "MSIE")) {
+            $iefilename = preg_replace('/\./', '%2e', $filename, substr_count($filename, '.') - 1);
+            header("Content-Disposition: attachment; filename=\"$iefilename\"");
+        } else {
+            header("Content-Disposition: attachment; filename=\"$filename\"");
+        }
+        header('Cache-Control:must-revalidate,post-check=0,pre-check=0');/
+        header('Expires:0');
+        header('Pragma:public');
+
+
+        if( $size !== null ){
+            if(isset($_SERVER['HTTP_RANGE'])) {
+                list($a, $range)=explode("=",$_SERVER['HTTP_RANGE']);
+                str_replace($range, "-", $range);
+                $size2=$size-1;
+                $new_length=$size2-$range+3;
+                header("HTTP/1.1 206 Partial Content");
+                header("Content-Length: $new_length");
+                header("Content-Range: bytes $range$size2/$size");
+            } else {
+                $range = 0;
+                $size2=$size-1;
+                $size3=$size+3;
+                header("Content-Range: bytes 0-$size2/$size");
+                header("Content-Length: ".$size3);
+            }
+        }
+        return $range;
+    }
