@@ -101,3 +101,16 @@
 				return '星期日';
 		}
 	}
+
+	/**
+	 * calculate diffdays
+	 */
+	function diffDays($s_time, $e_time = '')
+	{
+		if (empty($e_time))
+			$e_time = time();
+		$time = $e_time - $e_time;
+		$days = floor($time / 86400);
+
+		return $days;
+	}
