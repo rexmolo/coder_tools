@@ -16,7 +16,8 @@
 	    foreach ($arr as $key => $value) {
 	    	if (empty($value[$sortValue])) continue;
 		    $sortFoundation[$key]  = $value[$sortValue];
-	    }
+        }
+    
 	    array_multisort($sortFoundation, $sortFlag, $arr);
 
 	    return $arr;
