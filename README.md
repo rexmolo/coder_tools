@@ -3,5 +3,6 @@
  code working diary 
 - shell tools
 - PHP functionalities, classes
+o
 
 
