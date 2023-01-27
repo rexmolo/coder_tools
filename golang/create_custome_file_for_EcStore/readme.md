@@ -3,11 +3,13 @@
 
 公司的框架因为要创建二次开发目录，需要把一级目录的文件移动到custom目录，而且都是copy过去，这个工具可以帮助减轻这部分工作
 
+I developed this tool when I was learning Golang to create a custom folder for saving time to do repeat work. 
 
 
 使用方法：
 
 本地需要go的开发环境，进行编译
+need compile
 
 
 
