@@ -1,0 +1,5 @@
+[*.php]
+# php_diagnostic_php6401 = false
+php_diagnostic = none
+# [*Test.php]
+# php_diagnostic = false
