@@ -1,7 +1,7 @@
 <?php
+class Support {
 
-
-    function convert($size)
+    public function convert($size)
     {
         $unit=array('b','kb','mb','gb','tb','pb');
         return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
@@ -69,7 +69,7 @@
         } else {
             header("Content-Disposition: attachment; filename=\"$filename\"");
         }
-        header('Cache-Control:must-revalidate,post-check=0,pre-check=0');/
+        header('Cache-Control:must-revalidate,post-check=0,pre-check=0');
         header('Expires:0');
         header('Pragma:public');
 
@@ -93,3 +93,4 @@
         }
         return $range;
     }
+}

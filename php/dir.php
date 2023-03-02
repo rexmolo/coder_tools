@@ -1,5 +1,5 @@
 <?php
-
+class dir{
 /**
      * Utility function to recursive directory creation
      *
@@ -22,3 +22,5 @@
         }
         return false;
     }
+
+}

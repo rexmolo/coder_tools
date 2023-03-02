@@ -1,6 +1,12 @@
 <?php
 
-/**
+class Time
+{
+	/**
+	 * 获取当前时间前一天
+	 * 
+	 * @author: MaHui
+
      * 字符串格式时间 TO UNIX时间戳
      *
      * @param $times
@@ -114,3 +120,4 @@
 
 		return $days;
 	}
+}

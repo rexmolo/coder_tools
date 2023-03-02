@@ -1,5 +1,6 @@
 <?php
 
+class example {
        /**
 	 * 根据数组中value进行排序
 	 *
@@ -65,3 +66,4 @@
 
         return $array;
     }
+}
