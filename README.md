@@ -1,8 +1,7 @@
 # coder_tools
 
  code working diary 
-- shell tools
+- Shell tools
 - PHP functionalities, classes
-o
 
 
