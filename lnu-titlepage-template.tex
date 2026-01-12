@@ -1,0 +1,68 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{titlesec}
+\usepackage{tikz}
+\onehalfspacing
+
+\begin{document}
+
+% ==================== TITLE PAGE ====================
+\begin{titlepage}
+    % Logo at top left using tikz
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=north west] at ([xshift=0cm, yshift=0cm]current page.north west) {
+            \includegraphics[width=5cm, keepaspectratio]{lnu-logo.png}
+        };
+    \end{tikzpicture}
+    
+    \vspace{3cm}
+    
+    % Vertical line with text beside it
+    \noindent
+    \begin{tikzpicture}
+        \draw[line width=1pt] (0,0) -- (0,-5.5);
+    \end{tikzpicture}%
+    \hspace{0.4cm}%
+    \begin{minipage}[t]{0.85\textwidth}
+        \vspace{-5.3cm}
+        
+        {\Large \textbf{Masters Degree Project}}
+        
+        \vspace{2cm}
+        
+        {\LARGE \textbf{Evaluation of RAG and Tooling Approaches on Code Translation Quality}}
+	
+        
+        \vspace{0.5cm}
+	{\large \textit{- A Comparative Study Using LLM-Based Translation}}
+    
+    \end{minipage}
+    
+    \vfill
+    
+    % Bottom section: botanical image on left, metadata on right
+    \noindent
+    \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=south west] at ([xshift=-0.5cm, yshift=-0.1cm]current page.south west) {
+        \includegraphics[width=12cm, keepaspectratio]{botanical.png}
+    };
+\end{tikzpicture}
+
+    \hfill
+    \begin{minipage}[b]{0.5\textwidth}
+        \raggedright
+        \textit{Author(s):} xxxxx\\[0.2em]
+        \textit{Supervisor(s):} xxxxxx \\[0.2em]
+        \textit{Semester:} VT 2026 \\[0.2em]
+        \textit{Course:} 5DV50E \\[0.2em]
+        \textit{Subject:} Software Technology
+    \end{minipage}
+    
+    \vspace{0.5cm}
+    
+\end{titlepage}
